@@ -1,3 +1,21 @@
 <p>
   simple-form works!
 </p>
+<!--
+#myInput is the reference to this item
+so you can use this in the following button item
+-->
+<input #myInput type="text">
+<br>
+<!--
+(click) and (mouseover) are two event name, lead to onClick() function
+onClick() is defined in simple-form.component.ts
+myInput.value is from the item above
+-->
+<!--
+$event is used for capturing the event on this button item
+you can see the different between click button and mouseove rbutton
+-->
+<button (click)="onClick($event, myInput.value)">Click me to Console!!</button>
+<br>
+<button (mouseover)="onClick($event, myInput.value)">Over me!</button>

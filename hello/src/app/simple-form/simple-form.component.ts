@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simple-form.component.css']
 })
 export class SimpleFormComponent implements OnInit {
+	
+	// setp(2)
+	onClick(event, value){
+		console.log(event);
+		console.log('Click!!'+value);
+	}
 
   constructor() { }
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+//import {MailService} from'./mail.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // stet(1)
   title = 'app works!! by Alumi';
+  // step(4)
+  //constructor(private mail:MailService){}
+    constructor(
+  		@Inject('mail') private mail,
+  		@Inject('api') private api,
+  	){}
 }
