@@ -1,0 +1,28 @@
+<p>
+  drag-drop works!
+</p>
+<h4>Simple sortable</h4>
+<button (click)="onClick_set()">Click me to use default order!!</button>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Stage
+            </div>
+            <div class="panel-body">
+                <ul class="list-group" dnd-sortable-container [sortableData]="listTwo">
+                    <li *ngFor="let item of listTwo; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item.name}}+{{item.duration}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button (click)="onClick_save()">Click me to save this order!!</button>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                My prefences:<br/>
+                <span *ngFor="let item of listTwo; let i = index">{{i + 1}}) {{item.name}}<br/></span>
+            </div>
+        </div>
+    </div>
+</div>

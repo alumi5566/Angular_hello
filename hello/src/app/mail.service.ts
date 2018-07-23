@@ -12,4 +12,13 @@ export class MailService {
 	]
 
   constructor() { }
+
+  update(id, text){
+  	console.log('service:'+id+text);
+  	this.message = this.message.map(m=>
+  		m.id === id
+  		? {id, text}
+  		: m
+  		);
+  }
 }
